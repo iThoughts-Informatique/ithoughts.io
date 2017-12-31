@@ -17,5 +17,76 @@
 			"part": "",
 			"pro": ""
 		}
+	},
+	"cta": {
+		"seeMore": ""
+	},
+	"hosting": {
+		"bannerCta": {
+			"catchPhrase": "",
+			"title": ""
+		},
+		"head": {
+			"subtitle": "",
+			"title": ""
+		},
+		"main": {
+			"feat": {
+				"0": {
+					"alt": "",
+					"title": ""
+				},
+				"1": {
+					"alt": "",
+					"title": ""
+				}
+			},
+			"features": "",
+			"gendesc": "",
+			"title": ""
+		}
+	},
+	"web": {
+		"bannerCta": {
+			"catchPhrase": "",
+			"title": ""
+		},
+		"head": {
+			"subtitle": "",
+			"title": ""
+		},
+		"main": {
+			"gendesc": "",
+			"left": {
+				"desc": "",
+				"img": {
+					"typo3": {
+						"alt": ""
+					},
+					"wordpress": {
+						"alt": ""
+					}
+				},
+				"subtitle": "",
+				"title": ""
+			},
+			"right": {
+				"desc": "",
+				"img": {
+					"angular": {
+						"alt": ""
+					},
+					"sailsjs": {
+						"alt": ""
+					},
+					"symfony": {
+						"alt": ""
+					}
+				},
+				"subtitle": "",
+				"title": ""
+			},
+			"title": ""
+		}
 	}
 }

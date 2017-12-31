@@ -1,0 +1,100 @@
+:host{
+	position: relative;
+}
+.padder{
+	background-color: #eee;
+	padding: 65px 0 0;
+}
+
+.images {
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-direction: row;
+	flex-direction: row;
+	-ms-flex-pack: distribute;
+	justify-content: space-around;
+}
+.image {
+	width: 90px;
+	height: 90px;
+	-ms-flex: 0 0 90px;
+	flex: 0 0 90px;
+	line-height: 90px;
+
+	img {
+		max-width: 90px;
+		max-height: 90px;
+	}
+}
+.twoPaneContainer{
+	display: flex;
+	flex-direction: row;
+}
+h3, h4{
+	text-align: center;
+}
+.oneSide {
+	flex: 0 0 50%;
+	padding: 0 25px;
+	box-sizing: border-box;
+	position: relative;
+
+	.ctaArea {
+		position: absolute;
+		bottom: 0
+	}
+	.cta {
+		display: block;
+		width: 50px;
+		height: 50px;
+
+		&::before {
+			width: 50px;
+			height: 50px;
+			content: "";
+			display: block;
+			position: absolute;
+			bottom: 0;
+			transition: .5s all;
+		}
+	}
+	&:hover .cta{
+		width: 70px;
+		height: 70px;
+
+		&::before {
+			width: 150px;
+			height: 150px;
+		}
+	}
+}
+.oneSide-left{
+	.ctaArea, .cta {
+		&, &::before {
+			border-top-left-radius: 100%;
+			right: 0;
+		}
+	}
+}
+.oneSide-right{
+	.ctaArea, .cta {
+		&, &::before {
+			border-top-right-radius: 100%;
+			left: 0;
+		}
+	}
+}
+.cta::before{
+	content: "";
+	position: absolute;
+	bottom: 0;
+	width: 50px;
+	height: 50px;
+}
+.cta, .cta::before{
+	background-color: rgba(0,0,0,0.25);
+}
+.ctaCenter{
+	position: absolute;
+	bottom: 0;
+}

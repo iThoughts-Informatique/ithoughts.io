@@ -1,15 +1,19 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<ul>
-	<li><a [routerLink]="['/']">Accueil</a></li>
-	<li>
-		<a>Services</a>
+<header id="mainHeader">
+	<nav>
 		<ul>
-			<li><a [routerLink]="['/services/web']">Web</a></li>
-			<li><a [routerLink]="['/services/hosting']">Hébergement</a></li>
+			<li><a [routerLink]="['/']">Accueil</a></li>
+			<li>
+				<a>Services</a>
+				<ul>
+					<li><a [routerLink]="['/services/web']">Web</a></li>
+					<li><a [routerLink]="['/services/hosting']">Hébergement</a></li>
+				</ul>
+			</li>
+			<li><a [routerLink]="['/about']">A propos</a></li>
 		</ul>
-	</li>
-	<li><a [routerLink]="['/about']">A propos</a></li>
-</ul>
+	</nav>
+</header>
 <!--<div style="text-align:center">
 <h1>
 Welcome to {{ title }}!

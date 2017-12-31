@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Input, Component } from '@angular/core';
 import { AppTranslatableComponent } from '../app.translatableComponent';
 
 @Component({
@@ -7,6 +7,6 @@ import { AppTranslatableComponent } from '../app.translatableComponent';
 	styleUrls: ['./contact-form.scss']
 })
 export class ContactFormComponent extends AppTranslatableComponent {
-	title: String = undefined;
-	defaultText: String = 'Hey';
+	@Input() title: String = undefined;
+	@Input() defaultText: String;
 }

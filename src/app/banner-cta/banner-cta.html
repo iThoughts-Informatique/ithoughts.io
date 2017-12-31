@@ -1,10 +1,12 @@
 <section [class]="(formHidden ? '' : 'open') + ' dark'">
 	<div class="container">
-		<header>
-			<h3>PRÉPARONS ENSEMBLE VOTRE HÉBERGEMENT WEB</h3>
-			<p>Contactez-nous pour obtenir le détail de notre offre d'hébergement.</p>
-			<a (click)="toggleForm()" class="button">Contactez-nous</a>
-		</header>
+		<div>
+			<div>
+				<header><h3>{{ title }}</h3></header>
+				{{ catchPhrase }}
+			</div>
+			<a (click)="toggleForm()" class="button">{{ cta }}</a>
+		</div>
 		<article>
 			<app-contact-form></app-contact-form>
 		</article>

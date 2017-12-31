@@ -8,3 +8,45 @@ footer.dark {
 	box-sizing: content-box;
 	text-align: center;
 }
+
+#mainHeader {
+	position: fixed;
+	z-index: 2;
+	top: 0;
+	width: 100%;
+	background-color: #eee;
+	border-bottom: 1px solid #111;
+
+	ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+	li {
+		display: inline-block;
+		position: relative;
+
+		a {
+			padding: 5px 10px;
+			width: 100%;
+			text-decoration: none;
+			display: block;
+		}
+	}
+	nav > ul > li{
+		> ul {
+			position: absolute;
+			min-width: 100%;
+			background-color: #eee;
+			opacity: 0;
+			transition: .5s opacity;
+			pointer-events: none;
+			border: 1px solid #000;
+			border-top: none;
+		}
+		&:hover > ul, & > ul:hover {
+			opacity: 1;
+			pointer-events: all
+		}
+	}
+}

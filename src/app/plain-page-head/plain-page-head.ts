@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Input, Component } from '@angular/core';
 import { AppTranslatableComponent } from '../app.translatableComponent';
 
 @Component({
@@ -7,4 +7,6 @@ import { AppTranslatableComponent } from '../app.translatableComponent';
 	styleUrls: ['./plain-page-head.scss']
 })
 export class PlainPageHeadComponent extends AppTranslatableComponent {
+	@Input() title: string;
+	@Input() subtitle: string;
 }

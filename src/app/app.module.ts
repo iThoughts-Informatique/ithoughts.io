@@ -11,8 +11,10 @@ export function createTranslateLoader(http: HttpClient) {
 import { AppComponent } from './app.component';
 import { ContactFormComponent } from './contact-form/contact-form';
 import { BannerCtaComponent } from './banner-cta/banner-cta';
+import { PlainPageHeadComponent } from './plain-page-head/plain-page-head';
 
-import { HostingPageComponent } from './pages/hosting/hosting';
+import { HostingPageComponent, HostingPageMainComponent } from './pages/hosting/hosting';
+import { WebPageComponent, WebPageMainComponent } from './pages/web/web';
 
 
 import { routing } from './app.routes';
@@ -23,8 +25,12 @@ import { routing } from './app.routes';
 		AppComponent,
 		ContactFormComponent,
 		BannerCtaComponent,
+		PlainPageHeadComponent,
 
 		HostingPageComponent,
+		HostingPageMainComponent,
+		WebPageComponent,
+		WebPageMainComponent,
 	],
 	imports: [
 		BrowserModule,

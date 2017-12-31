@@ -3,7 +3,7 @@ import {TranslateService} from '@ngx-translate/core';
 
 @Component({})
 export class AppTranslatableComponent {
-	constructor(private translate: TranslateService) {
+	constructor(public translate: TranslateService) {
 		this.translate.addLangs(['en', 'fr']);
 		// Set the default language for translation strings, and the current language.
 		this.translate.setDefaultLang('en');

@@ -1,15 +1,17 @@
-<div data-content-area="header" data-containing="partials/darkContentTitle">
+<div class="plain-page-head">
 	<div class="section fullHeight dark fixed">
 		<div class="inner">
 			<div class="container">
-				<h1>Hébergement Web</h1>
-				<hr/>
-				<p>TODO</p>
+				<h1>{{ title }}</h1>
+				<div *ngIf="subtitle">
+					<hr/>
+					<p>{{ subtitle }}</p>
+				</div>
 			</div>
 		</div>
 	</div>
 	<div class="section fullHeight" style="overflow:hidden"></div>
 	<div class="bottom chevronPos">
-		<a href="#details"><span class="fa fa-chevron-down"></span></a>
+		<a><span class="fa fa-chevron-down"></span></a>
 	</div>
 </div>

@@ -6,13 +6,14 @@
 import { ModuleWithProviders } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { HostingPageComponent } from './pages/hosting/hosting';
+import { WebPageComponent } from './pages/web/web';
 // import { DogListComponent } from './dogs/dog-list.component';
 
 // Route Configuration
 export const routes: Routes = [
 	//{ path: '', component: IndexPageComponent },
 	{ path: 'services/hosting', component: HostingPageComponent },
-	//{ path: 'services/web', component: WebPageComponent },
+	{ path: 'services/web', component: WebPageComponent },
 	//{ path: 'about', component: AboutPageComponent },
 ];
 

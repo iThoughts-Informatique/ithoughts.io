@@ -1,6 +1,7 @@
 @import './vars';
 @import url(https://fonts.googleapis.com/css?family=Open+Sans|Slabo+27px);
 @import url(https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css);
+@import url(http://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css);
 
 body, html {
 	background-color: $white2;
@@ -40,11 +41,16 @@ a {
 	border-radius: 5px;
 	display: inline-block;
 	text-decoration: none;
+	cursor: pointer;
 }
 
 .dark{
 	background: $dark;
 	color: $white2;
+
+	h1, h2, h3, h4, h5, h6{
+		color: $white2;
+	}
 
 	.button, button {
 		&, &:visited, &:visited {
@@ -52,6 +58,52 @@ a {
 		}
 	}
 }
+
+hr {
+	border: none;
+	border-top: 2px solid #1FA67A;
+	width: 200px;
+	max-width: 90%;
+	margin: 35px auto;
+}
+
+h1 {
+	margin: 15px;
+	font-size: 60px;
+}
+h1, h2 {
+	font-weight: 700;
+}
+h1,h2,h3{
+	text-transform: uppercase;
+}
+
+
+body {
+	padding-top: 29px;
+}
+
+.fullHeight {
+	width: 100%;
+	min-height: calc(100vh - 29px);
+}
+
+ul.checklist{
+	list-style-type: none;
+	padding-left: 0;
+
+	> li{
+		margin: 15px 0;
+
+		&::before {
+			content: "✓";
+			margin-right: 10px;
+			color: #1FA67A;
+		}
+	}
+}
+
+
 
 
 $loaderSize: 200px;

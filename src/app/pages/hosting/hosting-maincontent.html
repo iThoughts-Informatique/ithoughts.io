@@ -1,0 +1,33 @@
+<div class="padder">
+	<div class="container">
+		<h2>{{ 'hosting.main.title' | translate }}</h2>
+		<article>
+			{{ 'hosting.main.gendesc' | translate }}
+			<hr>
+			<div data-content-area="items.1" data-containing="partials/services/sideImages">
+				<div class="side-image-container">
+					<div class="side-image right">
+						<div class="images template large">
+							<div data-content-area="images" data-containing="partials/minicaroussel">
+								<div style="display:none;" class="minicaroussel">
+									<div><div class="centerer">
+										<img src="/assets/images/services/ovh.jpg" alt=" 'hosting.main.feat.0.alt' | translate">
+										<div class="content"><h4>{{ 'hosting.main.feat.0.title' | translate }}</h4></div>
+										</div>
+									</div>
+									<div>
+										<div class="centerer">
+											<img src="/assets/images/services/docker.png" alt=" 'hosting.main.feat.1.alt' | translate">
+											<div class="content"><h4>{{ 'hosting.main.feat.1.title' | translate }}</h4></div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="content" [innerHTML]="'hosting.main.features' | translate"></div>
+					</div>
+				</div>
+			</div>
+		</article>
+	</div>
+</div>

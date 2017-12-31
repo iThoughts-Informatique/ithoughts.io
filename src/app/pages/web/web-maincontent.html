@@ -1,0 +1,39 @@
+<div class="padder">
+	<div class="container">
+		<h2>{{ 'web.main.title' | translate }}</h2>
+		<article [innerHTML]="'web.main.gendesc' | translate"></article>
+	</div>
+	<div class="twoPaneContainer">
+		<div class="oneSide oneSide-left">
+			<h3>{{ 'web.main.left.title' | translate }}</h3>
+			<h4>{{ 'web.main.left.subtitle' | translate }}</h4>
+			<hr/>
+			<div class="images">
+				<div class="image"><img src="/assets/images/typo3.svg" [alt]="'web.main.left.img.typo3.alt' | translate"></div>
+				<div class="image"><img src="/assets/images/wordpress.svg" [alt]="'web.main.left.img.wordpress.alt' | translate"></div>
+				<div class="image"><img src="/assets/images/prestashop.svg" [alt]="'web.main.left.img.prestashop.alt' | translate"></div>
+			</div>
+			<div class="content" [innerHTML]="'web.main.left.desc' | translate"></div>
+			<div class="foot"></div>
+			<div class="ctaArea">
+				<a class="cta" href="#" onclick="ga('send', 'event', 'CallToAction', 'click', 'CMS infos');" [title]="'cta.seeMore' | translate"></a>
+			</div>
+		</div>
+		<div class="oneSide oneSide-right">
+			<h3>{{ 'web.main.right.title' | translate }}</h3>
+			<h4>{{ 'web.main.right.subtitle' | translate }}</h4>
+			<hr/>
+			<div class="images">
+				<div class="image"><img src="/assets/images/sailsjs.svg" [alt]="'web.main.right.img.sailsjs.alt' | translate"></div>
+				<div class="image"><img src="/assets/images/angular.svg" [alt]="'web.main.right.img.angular.alt' | translate"></div>
+				<div class="image"><img src="/assets/images/symfony3.svg" [alt]="'web.main.right.img.symfony.alt' | translate"></div>
+			</div>
+			<div class="content" [innerHTML]="'web.main.right.desc' | translate"></div>
+			<div class="foot"></div>
+			<div class="ctaArea">
+				<a class="cta" href="#" onclick="ga('send', 'event', 'CallToAction', 'click', 'CMS infos');" [title]="'cta.seeMore' | translate"></a>
+			</div>
+		</div>
+	</div>
+	<div class="ctaCenter">En savoir plus</div>
+</div>
