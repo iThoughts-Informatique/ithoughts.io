@@ -1,0 +1,21 @@
+{
+	"contactForm": {
+		"identity": {
+			"legend": "",
+			"placeholder": {
+				"mail": "",
+				"name": ""
+			}
+		},
+		"labels": {
+			"email": "",
+			"name": "",
+			"type": ""
+		},
+		"submit": "",
+		"type": {
+			"part": "",
+			"pro": ""
+		}
+	}
+}

@@ -1,0 +1,10 @@
+@import '../../scss/vars';
+
+fieldset section{
+	display:flex;
+	flex-direction: row;
+	
+	> div{
+		flex: 0 0 33.333%;
+	}
+}

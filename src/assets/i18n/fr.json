@@ -1,0 +1,21 @@
+{
+	"contactForm": {
+		"identity": {
+			"legend": "Vous êtes...",
+			"placeholder": {
+				"mail": "votreemail@exemple.com",
+				"name": "Votre nom"
+			}
+		},
+		"labels": {
+			"email": "Mail",
+			"name": "Nom",
+			"type": "Vous êtes..."
+		},
+		"submit": "Envoyer",
+		"type": {
+			"part": "un professionnel",
+			"pro": "un particulier"
+		}
+	}
+}
