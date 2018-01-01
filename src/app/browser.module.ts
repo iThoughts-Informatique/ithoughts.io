@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { UniversalModule } from 'angular2-universal/browser';
 
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
@@ -22,8 +23,6 @@ import { WebPageComponent, WebPageMainComponent } from './pages/services/web/web
 
 import { routing } from './app.routes';
 
-console.log('AppModule')
-
 @NgModule({
 	declarations: [
 		AppComponent,
@@ -37,6 +36,7 @@ console.log('AppModule')
 		WebPageMainComponent,
 	],
 	imports: [
+		UniversalModule,
 		BrowserModule,
 		HttpClientModule,
 		ReactiveFormsModule,
