@@ -13,12 +13,16 @@ import { ContactFormComponent } from './contact-form/contact-form';
 import { BannerCtaComponent } from './banner-cta/banner-cta';
 import { PlainPageHeadComponent } from './plain-page-head/plain-page-head';
 
-import { HostingPageComponent, HostingPageMainComponent } from './pages/hosting/hosting';
-import { WebPageComponent, WebPageMainComponent } from './pages/web/web';
+import { ReactiveFormsModule } from '@angular/forms';
+import {GoogleAnalyticsEventsService} from './google-analytics-events.service';
+
+import { HostingPageComponent, HostingPageMainComponent } from './pages/services/hosting/hosting';
+import { WebPageComponent, WebPageMainComponent } from './pages/services/web/web';
 
 
 import { routing } from './app.routes';
 
+console.log('AppModule')
 
 @NgModule({
 	declarations: [
@@ -35,6 +39,7 @@ import { routing } from './app.routes';
 	imports: [
 		BrowserModule,
 		HttpClientModule,
+		ReactiveFormsModule,
 		TranslateModule.forRoot({
 			loader: {
 				provide: TranslateLoader,
@@ -44,7 +49,9 @@ import { routing } from './app.routes';
 		}),
 		routing,
 	],
-	providers: [],
+	providers: [
+		GoogleAnalyticsEventsService,
+	],
 	bootstrap: [
 		AppComponent,
 	]

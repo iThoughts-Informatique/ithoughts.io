@@ -3,9 +3,9 @@
 		<div>
 			<div>
 				<header><h3>{{ title }}</h3></header>
-				{{ catchPhrase }}
+				<p>{{ catchPhrase }}</p>
 			</div>
-			<a (click)="toggleForm()" class="button">{{ cta }}</a>
+			<a (click)="toggleForm()" class="button">{{ cta || 'bannerCta.cta' | translate }}</a>
 		</div>
 		<article>
 			<app-contact-form></app-contact-form>

@@ -1,4 +1,7 @@
 {
+	"bannerCta": {
+		"cta": ""
+	},
 	"contactForm": {
 		"identity": {
 			"legend": "",
@@ -20,6 +23,9 @@
 	},
 	"cta": {
 		"seeMore": ""
+	},
+	"footer": {
+		"rights": ""
 	},
 	"hosting": {
 		"bannerCta": {
@@ -46,6 +52,16 @@
 			"title": ""
 		}
 	},
+	"menu": {
+		"about": {
+			"_": ""
+		},
+		"services": {
+			"_": "",
+			"hosting": "",
+			"web": ""
+		}
+	},
 	"web": {
 		"bannerCta": {
 			"catchPhrase": "",
@@ -53,13 +69,16 @@
 		},
 		"head": {
 			"subtitle": "",
-			"title": ""
+			"title": "THIS IS EN"
 		},
 		"main": {
 			"gendesc": "",
 			"left": {
 				"desc": "",
 				"img": {
+					"prestashop": {
+						"alt": ""
+					},
 					"typo3": {
 						"alt": ""
 					},

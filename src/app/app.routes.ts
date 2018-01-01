@@ -5,8 +5,8 @@
 // import { provideRouter, RouterConfig } from '@angular/router';
 import { ModuleWithProviders } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { HostingPageComponent } from './pages/hosting/hosting';
-import { WebPageComponent } from './pages/web/web';
+import { HostingPageComponent } from './pages/services/hosting/hosting';
+import { WebPageComponent } from './pages/services/web/web';
 // import { DogListComponent } from './dogs/dog-list.component';
 
 // Route Configuration

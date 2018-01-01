@@ -1,4 +1,7 @@
 {
+	"bannerCta": {
+		"cta": "Contactez-nous"
+	},
 	"contactForm": {
 		"identity": {
 			"legend": "Vous êtes...",
@@ -20,6 +23,9 @@
 	},
 	"cta": {
 		"seeMore": "En savoir plus"
+	},
+	"footer": {
+		"rights": "Tous droits réservés"
 	},
 	"hosting": {
 		"bannerCta": {
@@ -46,6 +52,16 @@
 			"title": "Un hébergement moderne, dont vous n'aurez pas à vous soucier"
 		}
 	},
+	"menu": {
+		"about": {
+			"_": "À propos"
+		},
+		"services": {
+			"_": "Services",
+			"hosting": "Hébergement",
+			"web": "Web"
+		}
+	},
 	"web": {
 		"bannerCta": {
 			"catchPhrase": "",
@@ -60,6 +76,9 @@
 			"left": {
 				"desc": "<p>Idéal pour votre projet de site corporate, de e-shop, de blog forum.</p><p>Le CMS est un équilibre entre <em>facilité</em> d'utilisation, <em>versatilité</em> et <em>rapidité</em> de mise en place.</p>",
 				"img": {
+					"prestashop": {
+						"alt": ""
+					},
 					"typo3": {
 						"alt": "Logo de Typo3"
 					},

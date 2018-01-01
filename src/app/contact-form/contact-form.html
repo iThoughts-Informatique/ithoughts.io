@@ -1,25 +1,25 @@
-<form>
+<form [formGroup]="emailForm" (ngSubmit)="submitContact($event)">
 	<h3 [hidden]=!title>{{title  | translate}}</h3>
 	<fieldset>
 		<legend>{{"contactForm.identity.legend" | translate}}</legend>
 		<section>
 			<div>
 				<label for="contact-name">{{"contactForm.labels.name" | translate}}</label>
-				<input name="name" id="contact-name" type="text" [placeholder]="'contactForm.identity.placeholder.name' | translate"/>
+				<input formControlName="name" id="contact-name" type="text" [placeholder]="'contactForm.identity.placeholder.name' | translate"/>
 			</div>
 			<div>
 				<label for="contact-email">{{"contactForm.labels.email" | translate}}</label>
-				<input name="email" id="contact-email" type="email" [placeholder]="'contactForm.identity.placeholder.mail' | translate"/>
+				<input formControlName="email" id="contact-email" type="email" [placeholder]="'contactForm.identity.placeholder.mail' | translate"/>
 			</div>
 			<div>
 				<label for="contact-type">{{"contactForm.labels.type" | translate}}</label>
-				<select name="type" id="contact-type">
-					<option>{{"contactForm.type.pro" | translate}}</option>
-					<option>{{"contactForm.type.part" | translate}}</option>
+				<select formControlName="type" id="contact-type">
+					<option value="pro">{{"contactForm.type.pro" | translate}}</option>
+					<option value="part">{{"contactForm.type.part" | translate}}</option>
 				</select>
 			</div>
 		</section>
 	</fieldset>
-	<textarea>{{defaultText | translate}}</textarea>
+	<textarea formControlName="message">{{defaultText | translate}}</textarea>
 	<button>{{"contactForm.submit" | translate}}</button>
 </form>
