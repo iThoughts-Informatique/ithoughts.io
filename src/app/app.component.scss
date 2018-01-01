@@ -20,7 +20,7 @@ footer.dark {
 	border-bottom: 1px solid #111;
 	display: flex;
 	flex-direction: row;
-	align-items: center;
+	align-items: stretch;
 	justify-content: space-between;
 
 	> *{
@@ -44,20 +44,33 @@ footer.dark {
 			box-sizing: border-box;
 		}
 	}
-	nav > ul > li{
-		> ul {
-			position: absolute;
-			min-width: 100%;
-			background-color: #eee;
-			opacity: 0;
-			transition: .5s opacity;
-			pointer-events: none;
-			border: 1px solid #000;
-			border-top: none;
-		}
-		&:hover > ul, & > ul:hover {
-			opacity: 1;
-			pointer-events: all
+	nav > ul{
+		height: 100%;
+		display: flex;
+		flex-direction: row;
+		align-items: stretch;
+
+		& > li{
+			flex: 1 1 auto;
+			display: flex;
+			align-items: center;
+			position: relative;
+
+			& > ul {
+				position: absolute;
+				top: 100%;
+				min-width: 100%;
+				background-color: #eee;
+				opacity: 0;
+				transition: .5s opacity;
+				pointer-events: none;
+				border: 1px solid #000;
+				border-top: none;
+			}
+			&:hover > ul, & > ul:hover {
+				opacity: 1;
+				pointer-events: all
+			}
 		}
 	}
 }
@@ -70,6 +83,9 @@ footer.dark {
 	color: $dark;
 }
 #langSwitcher{
+	display: flex;
+	align-items: center;
+
 	&:hover .flag, .flag.active{
 		opacity: 1;
 		pointer-events: all;
@@ -77,6 +93,7 @@ footer.dark {
 	}
 
 	.flag{
+		cursor: pointer;
 		vertical-align: baseline;
 		margin: 0 5px;
 		display: inline-block;

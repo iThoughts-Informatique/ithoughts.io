@@ -21,7 +21,29 @@
 	-ms-flex: 0 0 90px;
 	flex: 0 0 90px;
 	line-height: 90px;
+	position: relative;
 
+	&::after{
+		content: attr(data-text);
+		display: inline-block;
+		position: absolute;
+		top: 40%;
+		left: 50%;
+		text-align: center;
+		background: rgba($dark, 0.5);
+		color: $white2;
+		width: auto;
+		height: auto;
+		transform: translate(-50%,-50%);
+		padding: 5px;
+		line-height: 1.5em;
+		opacity: 0;
+		transition: 0.5s all;
+	}
+	&:hover::after{
+		opacity: 1;
+		top:50%;
+	}
 	img {
 		max-width: 90px;
 		max-height: 90px;
@@ -30,6 +52,9 @@
 .twoPaneContainer{
 	display: flex;
 	flex-direction: row;
+	@media(max-width: 680px){
+		flex-direction: column;
+	}
 }
 h3, h4{
 	text-align: center;
@@ -82,6 +107,15 @@ h3, h4{
 		&, &::before {
 			border-top-right-radius: 100%;
 			left: 0;
+
+			@media(max-width: 680px){
+				border-top-right-radius: 0;
+				border-bottom-left-radius: 100%;
+				left: auto;
+				right: 0;
+				bottom:auto;
+				top:0;
+			}
 		}
 	}
 }
@@ -101,10 +135,19 @@ h3, h4{
 }
 .ctaCenter{
 	position: absolute;
-	bottom: 0;
-	width: 100px;
-	text-align: center;
-	left: 50%;
-	transform: translate(-50%, 0);
 	color: $white2;
+	pointer-events: none;
+	z-index: 1;
+
+	text-align: center;
+	bottom: 0;
+	right: 0;
+	transform: translate(50%, 0);
+	width: 100px;
+	@media(max-width: 680px){
+		text-align: right;
+		right: 2px;
+		transform: translate(0, 50%);
+		width: 50px;
+	}
 }

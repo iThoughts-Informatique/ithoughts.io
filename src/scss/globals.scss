@@ -11,6 +11,10 @@ body, html {
 	color: $lightGrey;
 	font-size: 19px;
 	line-height: 100%;
+	width: 100%;
+}
+body {
+	padding-top: 50px;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -31,8 +35,11 @@ a {
 }
 
 .container {
-	max-width: 980px;
 	margin: 0 auto;
+	max-width: 980px;
+	@media(max-width: 1000px){
+		padding: 0 10px;
+	}
 }
 
 .button, button {
@@ -71,17 +78,16 @@ hr {
 h1 {
 	margin: 15px;
 	font-size: 60px;
+	
+	@media(max-width: 600px){
+		font-size: 36px;
+	}
 }
 h1, h2 {
 	font-weight: 700;
 }
 h1,h2,h3{
 	text-transform: uppercase;
-}
-
-
-body {
-	padding-top: 29px;
 }
 
 .fullHeight {
