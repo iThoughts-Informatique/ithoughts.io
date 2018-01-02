@@ -9,10 +9,11 @@ import { AppTranslatableComponent } from '../app.translatableComponent';
 export class PlainPageHeadComponent extends AppTranslatableComponent {
 	@Input() title: string;
 	@Input() subtitle: string;
-	
+
 	scrollOutPage() {
-		console.log(this);
-		var dom = document.querySelector('app-plain-page-head + *');
-		dom.scrollIntoView({behavior: 'smooth'});
+		const dom = document.querySelector('app-plain-page-head + *');
+		const rect = dom.getBoundingClientRect();
+		console.log({dom, rect});
+		window.scrollTo({ left: window.pageXOffset, top: rect.top + window.pageYOffset - 50, behavior: 'smooth' });
 	}
 }

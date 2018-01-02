@@ -6,7 +6,12 @@
 	::ng-deep ~ *{
 		position: relative;
 		z-index: 1;
+		background-color: $white2;
+		display: block;
 	}
+}
+.plain-page-head{
+	position: relative;
 }
 .section.fixed {
 	position: fixed;

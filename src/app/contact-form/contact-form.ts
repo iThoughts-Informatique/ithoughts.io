@@ -4,13 +4,14 @@ import { AppTranslatableComponent } from '../app.translatableComponent';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import {TranslateService} from '@ngx-translate/core';
 import {GoogleAnalyticsEventsService} from '../google-analytics-events.service';
+import {MailService} from '../mail.service';
 
 @Component({
 	selector: 'app-contact-form',
 	templateUrl: './contact-form.html',
 	styleUrls: ['./contact-form.scss']
 })
-export class ContactFormComponent extends AppTranslatableComponent {
+export class ContactFormComponent {
 	@Input() title: String = undefined;
 	@Input() defaultText: String;
 
@@ -22,8 +23,7 @@ export class ContactFormComponent extends AppTranslatableComponent {
 		message: new FormControl('', Validators.required),
 	});
 
-	constructor(public googleAnalyticsEventsService: GoogleAnalyticsEventsService, translate: TranslateService) {
-		super(translate);
+	constructor(private mailService: MailService, private googleAnalyticsEventsService: GoogleAnalyticsEventsService) {
 		if (this.defaultText) {
 			this.emailForm.controls.message.setValue(this.defaultText);
 		}
@@ -31,7 +31,7 @@ export class ContactFormComponent extends AppTranslatableComponent {
 
 	submitContact(event) {
 		console.log(event);
-		console.log(this.emailForm.value);
 		this.googleAnalyticsEventsService.emitEvent('testCategory', 'testAction', 'testLabel', 10);
+		this.mailService.sendMail(this.emailForm.value);
 	}
 }

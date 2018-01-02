@@ -14,7 +14,7 @@ body, html {
 	width: 100%;
 }
 body {
-	padding-top: 50px;
+	padding-top: $headHeight;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -92,13 +92,17 @@ h1,h2,h3{
 
 .fullHeight {
 	width: 100%;
-	min-height: calc(100vh - 29px);
+	min-height: calc(100vh - #{$headHeight});
 }
 
 .padder{
 	background-color: $white2;
 	padding: 65px 0;
 	position: relative;
+    margin: 0 20px;
+    z-index: 1;
+    box-shadow: 0 0 15px 0 $dark;
+    top: -10px;
 }
 
 ul.checklist{

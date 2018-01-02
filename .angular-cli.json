@@ -19,9 +19,13 @@
 			"testTsconfig": "tsconfig.spec.json",
 			"prefix": "app",
 			"styles": [
-				"scss/globals.scss"
+				"scss/globals.scss",
+				"../node_modules/owl.carousel/dist/assets/owl.carousel.css",
+				"../node_modules/owl.carousel/dist/assets/owl.theme.default.css"
 			],
-			"scripts": [],
+			"scripts": [
+				"../node_modules/jquery/dist/jquery.js"
+			],
 			"environmentSource": "environments/environment.ts",
 			"environments": {
 				"dev": "environments/environment.ts",

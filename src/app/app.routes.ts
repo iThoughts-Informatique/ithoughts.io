@@ -7,6 +7,7 @@ import { ModuleWithProviders } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { HostingPageComponent } from './pages/services/hosting/hosting';
 import { WebPageComponent } from './pages/services/web/web';
+import { AboutComponent } from './pages/about/about.component';
 // import { DogListComponent } from './dogs/dog-list.component';
 
 // Route Configuration
@@ -14,7 +15,7 @@ export const routes: Routes = [
 	//{ path: '', component: IndexPageComponent },
 	{ path: 'services/hosting', component: HostingPageComponent },
 	{ path: 'services/web', component: WebPageComponent },
-	//{ path: 'about', component: AboutPageComponent },
+	{ path: 'about', component: AboutComponent },
 ];
 
 // Deprecated provide

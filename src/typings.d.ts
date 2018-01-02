@@ -3,4 +3,4 @@ declare var module: NodeModule;
 interface NodeModule {
   id: string;
 }
-// declare let ga: any;
+declare var ga: Function;

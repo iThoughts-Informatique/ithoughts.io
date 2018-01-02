@@ -1,4 +1,17 @@
 {
+	"about": {
+		"legal": {
+			"contact": {
+				"email": "Email",
+				"phone": "Téléphone",
+				"title": "Contact"
+			},
+			"identity": {
+				"title": "Identité"
+			},
+			"title": "Mentions légales"
+		}
+	},
 	"bannerCta": {
 		"cta": "Contactez-nous"
 	},
@@ -18,7 +31,8 @@
 		"submit": "Envoyer",
 		"type": {
 			"part": "un professionnel",
-			"pro": "un particulier"
+			"pro": "un particulier",
+			"select": "Sélectionnez..."
 		}
 	},
 	"cta": {
@@ -38,16 +52,20 @@
 		},
 		"main": {
 			"feat": {
-				"0": {
+				"docker": {
+					"alt": "Logo de Docker",
+					"title": "Architecture conteneurisée avec Docker"
+				},
+				"ovh": {
 					"alt": "Logo de OVH",
 					"title": "Hébergement chez OVH"
 				},
-				"1": {
-					"alt": "Logo de Docker",
-					"title": "Architecture conteneurisée avec Docker"
+				"rainloop": {
+					"alt": "Logo de Rainloop",
+					"title": "Webmail avec Rainloop"
 				}
 			},
-			"features": "<ul class=\"checklist\"><li>Une architecture cloud pour vos services</li><li>Vos données sont protégées</li><li>Votre projet est facilement migrable</li><li>Frais de maintenance réduits</li><li>Sécurisation via HTTPS incluse</li></ul>",
+			"features": "<ul class=\"checklist\"><li>Une architecture cloud pour vos services</li><li>Vos données sont protégées</li><li>Votre projet est facilement migrable</li><li>Frais de maintenance réduits</li><li>Sécurisation via HTTPS incluse</li><li>5 adresses email & webmail inclus</li></ul>",
 			"gendesc": "L'hébergement de votre site, plateforme ou application est un critère important. Un hébergement bien sécurisé protège vos données, votre application et vos utilisateurs.",
 			"title": "Un hébergement moderne, dont vous n'aurez pas à vous soucier"
 		}

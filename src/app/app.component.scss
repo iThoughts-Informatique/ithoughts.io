@@ -16,8 +16,8 @@ footer.dark {
 	z-index: 2;
 	top: 0;
 	width: 100%;
-	background-color: #eee;
-	border-bottom: 1px solid #111;
+	background-color: $white2;
+	box-shadow: 0 2px 5px 0 rgba($dark, 0.5);
 	display: flex;
 	flex-direction: row;
 	align-items: stretch;
@@ -42,6 +42,7 @@ footer.dark {
 			text-decoration: none;
 			display: block;
 			box-sizing: border-box;
+			cursor: pointer;
 		}
 	}
 	nav > ul{

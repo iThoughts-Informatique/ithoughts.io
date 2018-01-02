@@ -1,4 +1,17 @@
 {
+	"about": {
+		"legal": {
+			"contact": {
+				"email": "",
+				"phone": "",
+				"title": ""
+			},
+			"identity": {
+				"title": ""
+			},
+			"title": ""
+		}
+	},
 	"bannerCta": {
 		"cta": ""
 	},
@@ -18,7 +31,8 @@
 		"submit": "",
 		"type": {
 			"part": "",
-			"pro": ""
+			"pro": "",
+			"select": ""
 		}
 	},
 	"cta": {
@@ -38,11 +52,15 @@
 		},
 		"main": {
 			"feat": {
-				"0": {
+				"docker": {
 					"alt": "",
 					"title": ""
 				},
-				"1": {
+				"ovh": {
+					"alt": "",
+					"title": ""
+				},
+				"rainloop": {
 					"alt": "",
 					"title": ""
 				}
