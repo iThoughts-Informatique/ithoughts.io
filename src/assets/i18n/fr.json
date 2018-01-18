@@ -16,114 +16,99 @@
 		"cta": "Contactez-nous"
 	},
 	"contactForm": {
-		"identity": {
-			"legend": "Vous êtes...",
-			"placeholder": {
-				"mail": "votreemail@exemple.com",
-				"name": "Votre nom"
-			}
-		},
 		"labels": {
 			"email": "Mail",
+			"message": "Message",
 			"name": "Nom",
 			"type": "Vous êtes..."
+		},
+		"result": {
+			"error": "Une erreur est survenue. Veuillez réessayer ultérieurement.",
+			"success": "Votre message a bien été envoyé."
 		},
 		"submit": "Envoyer",
 		"type": {
 			"part": "un professionnel",
-			"pro": "un particulier",
-			"select": "Sélectionnez..."
+			"pro": "un particulier"
 		}
 	},
 	"cta": {
-		"seeMore": "En savoir plus"
+		"seeMore": "Voir plus"
+	},
+	"dev": {
+		"gendesc": "<p>Aujourd'hui la visibilité en ligne est devenue un atout capital pour la réussite d'un projet:</p><ul class=\"checklist\"><li>Plus de <a href=\"https://www.wizishop.fr/blog/chiffre-ecommerce/ropo-78-des-acheteurs-sinforment-en-ligne-avant-dacheter-en-magasin-le-chiffre-du-jour.html\" rel=\"nofollow\">75% des internautes</a> des acheteurs se renseignent en ligne au préalable.</li><li>Un site internet bien construit/présenté est un gage de sérieux pour votre entreprise. (trouver lien)</li></ul>",
+		"left": {
+			"desc": "<p>Idéal pour votre projet de site corporate, de e-shop, de blog forum.</p><p>Le CMS est un équilibre entre <em>facilité</em> d'utilisation, <em>versatilité</em> et <em>rapidité</em> de mise en place.</p>",
+			"img": {
+				"prestashop": {
+					"alt": "Logo de Prestashop"
+				},
+				"typo3": {
+					"alt": "Logo de Typo3"
+				},
+				"wordpress": {
+					"alt": "Logo de WordPress"
+				}
+			},
+			"subtitle": "Économique et largement utilisé",
+			"title": "Le CMS"
+		},
+		"right": {
+			"desc": "<p>Pour votre besoin nécessitant un cahier des charges particulier, une plateforme concue sur mesure pour répondre à votre besoin sera étudiée et mise en place.</p>",
+			"img": {
+				"angular": {
+					"alt": "Logo de Angular2"
+				},
+				"sailsjs": {
+					"alt": "Logo de SailsJS"
+				},
+				"symfony": {
+					"alt": "Logo de Symfony3"
+				}
+			},
+			"subtitle": "Souple et sur mesure",
+			"title": "Le développement spécifique"
+		},
+		"title": "Etre visible: un enjeu pour les entreprises"
 	},
 	"footer": {
 		"rights": "Tous droits réservés"
 	},
 	"hosting": {
+		"feat": {
+			"docker": {
+				"alt": "Logo de Docker",
+				"title": "Architecture conteneurisée avec Docker"
+			},
+			"ovh": {
+				"alt": "Logo de OVH",
+				"title": "Hébergement chez OVH"
+			},
+			"rainloop": {
+				"alt": "Logo de Rainloop",
+				"title": "Webmail avec Rainloop"
+			}
+		},
+		"features": "<ul class=\"checklist\"><li>Une architecture cloud pour vos services</li><li>Vos données sont protégées</li><li>Votre projet est facilement migrable</li><li>Frais de maintenance réduits</li><li>Sécurisation via HTTPS incluse</li><li>5 adresses email & webmail inclus</li></ul>",
+		"gendesc": "L'hébergement de votre site, plateforme ou application est un critère important. Un hébergement bien sécurisé protège vos données, votre application et vos utilisateurs.",
+		"title": "Un hébergement moderne, dont vous n'aurez pas à vous soucier"
+	},
+	"index": {
 		"bannerCta": {
-			"catchPhrase": "Contactez-nous pour obtenir le détail de notre offre d'hébergement.",
-			"title": "Préparons ensemble votre hébergement web"
+			"catchPhrase": "",
+			"title": "Préparons ensemble votre site web"
 		},
 		"head": {
-			"subtitle": "Todo",
-			"title": "Hébergement Web"
-		},
-		"main": {
-			"feat": {
-				"docker": {
-					"alt": "Logo de Docker",
-					"title": "Architecture conteneurisée avec Docker"
-				},
-				"ovh": {
-					"alt": "Logo de OVH",
-					"title": "Hébergement chez OVH"
-				},
-				"rainloop": {
-					"alt": "Logo de Rainloop",
-					"title": "Webmail avec Rainloop"
-				}
-			},
-			"features": "<ul class=\"checklist\"><li>Une architecture cloud pour vos services</li><li>Vos données sont protégées</li><li>Votre projet est facilement migrable</li><li>Frais de maintenance réduits</li><li>Sécurisation via HTTPS incluse</li><li>5 adresses email & webmail inclus</li></ul>",
-			"gendesc": "L'hébergement de votre site, plateforme ou application est un critère important. Un hébergement bien sécurisé protège vos données, votre application et vos utilisateurs.",
-			"title": "Un hébergement moderne, dont vous n'aurez pas à vous soucier"
+			"subtitle": "Création & hébergement de sites web",
+			"title": "iThoughts"
 		}
 	},
 	"menu": {
 		"about": {
 			"_": "À propos"
 		},
-		"services": {
-			"_": "Services",
-			"hosting": "Hébergement",
-			"web": "Web"
-		}
-	},
-	"web": {
-		"bannerCta": {
-			"catchPhrase": "",
-			"title": "Préparons ensemble votre site web"
-		},
-		"head": {
-			"subtitle": "Création de votre site web, sur mesure ou avec un CMS",
-			"title": "Développement Web"
-		},
-		"main": {
-			"gendesc": "<p>Aujourd'hui la visibilité en ligne est devenue un atout capital pour la réussite d'un projet:</p><ul class=\"checklist\"><li>Plus de <a href=\"https://www.wizishop.fr/blog/chiffre-ecommerce/ropo-78-des-acheteurs-sinforment-en-ligne-avant-dacheter-en-magasin-le-chiffre-du-jour.html\" rel=\"nofollow\">75% des internautes</a> des acheteurs se renseignent en ligne au préalable.</li><li>Un site internet bien construit/présenté est un gage de sérieux pour votre entreprise. (trouver lien)</li></ul>",
-			"left": {
-				"desc": "<p>Idéal pour votre projet de site corporate, de e-shop, de blog forum.</p><p>Le CMS est un équilibre entre <em>facilité</em> d'utilisation, <em>versatilité</em> et <em>rapidité</em> de mise en place.</p>",
-				"img": {
-					"prestashop": {
-						"alt": ""
-					},
-					"typo3": {
-						"alt": "Logo de Typo3"
-					},
-					"wordpress": {
-						"alt": "Logo de WordPress"
-					}
-				},
-				"subtitle": "Économique et largement utilisé",
-				"title": "Le CMS"
-			},
-			"right": {
-				"desc": "<p>Pour votre besoin nécessitant un cahier des charges particulier, une plateforme concue sur mesure pour répondre à votre besoin sera étudiée et mise en place.</p>",
-				"img": {
-					"angular": {
-						"alt": "Logo de Angular2"
-					},
-					"sailsjs": {
-						"alt": "Logo de SailsJS"
-					},
-					"symfony": {
-						"alt": "Logo de Symfony3"
-					}
-				},
-				"subtitle": "Souple et sur mesure",
-				"title": "Le développement spécifique"
-			},
-			"title": "Etre visible: un enjeu pour les entreprises"
+		"index": {
+			"_": "Accueil"
 		}
 	}
 }

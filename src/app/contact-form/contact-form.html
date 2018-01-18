@@ -1,26 +1,37 @@
-<form [formGroup]="emailForm" (ngSubmit)="submitContact($event)">
-	<h3 [hidden]=!title>{{title  | translate}}</h3>
-	<fieldset>
-		<legend>{{"contactForm.identity.legend" | translate}}</legend>
+<form [formGroup]="emailForm" (ngSubmit)="submitContact($event)" class="material">
+	<div ref-fields>
+		<h3 [hidden]=!title>{{title | translate}}</h3>
 		<section>
-			<div>
+			<div class="group">
+				<input [(ngModel)]="name" ngControl="name" formControlName="name" id="contact-name" type="text" required/>
+				<span class="highlight"></span>
+				<span class="bar"></span>
 				<label for="contact-name">{{"contactForm.labels.name" | translate}}</label>
-				<input formControlName="name" id="contact-name" type="text" [placeholder]="'contactForm.identity.placeholder.name' | translate"/>
 			</div>
-			<div>
+			<div class="group">
+				<input [(ngModel)]="email" ngControl="email" formControlName="email" id="contact-email" type="email" required/>
+				<span class="highlight"></span>
+				<span class="bar"></span>
 				<label for="contact-email">{{"contactForm.labels.email" | translate}}</label>
-				<input formControlName="email" id="contact-email" type="email" [placeholder]="'contactForm.identity.placeholder.mail' | translate"/>
 			</div>
-			<div>
-				<label for="contact-type">{{"contactForm.labels.type" | translate}}</label>
-				<select formControlName="type" id="contact-type">
-					<option value="" selected disabled>{{"contactForm.type.select" | translate}}</option>
+			<div class="group">
+				<select [(ngModel)]="type" ngControl="type" formControlName="type" id="contact-type" required>
+					<option value="" selected disabled></option>
 					<option value="pro">{{"contactForm.type.pro" | translate}}</option>
 					<option value="part">{{"contactForm.type.part" | translate}}</option>
 				</select>
+				<span class="highlight"></span>
+				<span class="bar"></span>
+				<label for="contact-type">{{"contactForm.labels.type" | translate}}</label>
 			</div>
 		</section>
-	</fieldset>
-	<textarea formControlName="message">{{defaultText | translate}}</textarea>
-	<button>{{"contactForm.submit" | translate}}</button>
+		<div class="group">
+			<textarea [(ngModel)]="message" ngControl="message" formControlName="message" id="contact-message" required minlength="25">{{defaultText | translate}}</textarea>
+			<span class="highlight"></span>
+			<span class="bar"></span>
+			<label for="contact-message">{{"contactForm.labels.message" | translate}}</label>
+		</div>
+	</div>
+	<div ref-infos></div>
+	<button [disabled]="!this.emailForm.valid">{{"contactForm.submit" | translate}}</button>
 </form>

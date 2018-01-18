@@ -17,13 +17,13 @@ import { ReactiveFormsModule } from '@angular/forms';
 import {GoogleAnalyticsEventsService} from './google-analytics-events.service';
 import {MailService} from './mail.service';
 
-import { HostingPageComponent, HostingPageMainComponent } from './pages/services/hosting/hosting';
-import { WebPageComponent, WebPageMainComponent } from './pages/services/web/web';
-
 import { OwlModule } from 'ng2-owl-carousel';
 
 import { routing } from './app.routes';
 import { AboutComponent } from './pages/about/about.component';
+import { IndexPageComponent } from './pages/index/indexPage.component';
+import { HostingComponent } from './pages/index/hosting/hosting.component';
+import { DevComponent } from './pages/index/dev/dev.component';
 
 @NgModule({
 	declarations: [
@@ -32,11 +32,10 @@ import { AboutComponent } from './pages/about/about.component';
 		BannerCtaComponent,
 		PlainPageHeadComponent,
 
-		HostingPageComponent,
-		HostingPageMainComponent,
-		WebPageComponent,
-		WebPageMainComponent,
 		AboutComponent,
+		IndexPageComponent,
+		HostingComponent,
+		DevComponent,
 	],
 	imports: [
 		BrowserModule,

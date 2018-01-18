@@ -12,6 +12,9 @@ body, html {
 	font-size: 19px;
 	line-height: 100%;
 	width: 100%;
+	box-sizing: border-box;
+	min-height: 100%;
+	height: 100%;
 }
 body {
 	padding-top: $headHeight;
@@ -50,6 +53,12 @@ a {
 	display: inline-block;
 	text-decoration: none;
 	cursor: pointer;
+
+	&[disabled]{
+		border-color: $lightGrey;
+		color: $lightGrey;
+		cursor:not-allowed;
+	}
 }
 
 .dark{
@@ -61,6 +70,9 @@ a {
 	}
 
 	.button, button {
+		&[disabled]{
+			color: $lightGrey;
+		}
 		&, &:visited, &:visited {
 			color: $white2;
 		}
@@ -78,7 +90,7 @@ hr {
 h1 {
 	margin: 15px;
 	font-size: 60px;
-	
+
 	@media(max-width: 600px){
 		font-size: 36px;
 	}
@@ -99,10 +111,10 @@ h1,h2,h3{
 	background-color: $white2;
 	padding: 65px 0;
 	position: relative;
-    margin: 0 20px;
-    z-index: 1;
-    box-shadow: 0 0 15px 0 $dark;
-    top: -10px;
+	margin: 0 20px;
+	//    z-index: 1;
+	//    box-shadow: 0 0 15px 0 $dark;
+	//    top: -10px;
 }
 
 ul.checklist{
@@ -117,6 +129,94 @@ ul.checklist{
 			margin-right: 10px;
 			color: $green;
 		}
+	}
+}
+.flex-col{
+	display: flex;
+	flex-direction: row;
+
+	> * {
+		flex: 1 1 auto;
+	}
+}
+
+
+$bg-color: $grey;
+$hl-color: $green;
+$muted-color: mix(white, $bg-color, 70%);
+$trans-time: 300ms;
+$width: 100%;
+
+form.material{
+	select{
+		-webkit-appearance:none;
+		-moz-appearance:none;
+		appearance:none;
+	}
+
+	input,
+	textarea,
+	select {
+		background: none;
+		color: $muted-color;
+		font-size: 18px;
+		padding: 10px 10px 10px 5px;
+		display: block;
+		width: $width;
+		border: none;
+		border-radius: 0;
+		border-bottom: 1px solid $muted-color;
+		box-sizing: border-box;
+		&:focus {
+			outline: none;
+		}
+		&:focus ~ label,
+		&:valid ~ label {
+			top: -14px;
+			font-size: 12px;
+			color: $hl-color;
+		}
+		&.ng-touched:invalid ~ label{
+			top: -14px;
+			font-size: 12px;
+			color:mix(red, $grey, 50%);
+		}
+		&:focus ~ .bar:before {
+			width: $width;
+		}
+		&:-webkit-autofill{
+			background-color: rgba($hl-color, 0.25)!important;
+		}
+	}
+	label {
+		color: $muted-color;
+		font-size: 16px;
+		font-weight: normal;
+		position: absolute;
+		pointer-events: none;
+		left: 15px;
+		top: 10px;
+		transition: $trans-time ease all;
+	}
+	.bar {
+		position: relative;
+		display: block;
+		width: $width;
+		&:before {
+			content: '';
+			height: 2px;
+			width: 0;
+			bottom: 0px;
+			position: absolute;
+			background: $hl-color;
+			transition: $trans-time ease all;
+			left: 0%;
+		}
+	}
+	.group {
+		position: relative;
+		margin: 15px 0;
+		padding: 0 10px;
 	}
 }
 
