@@ -2,18 +2,26 @@ import { Injectable } from '@angular/core';
 
 import * as Diaspora from 'diaspora/dist/standalone/diaspora.min.js';
 
-let ContactMail;
+import { environment } from '../environments/environment';
 
 @Injectable()
 export class MailService {
+	private ContactMail;
+
 	constructor() {
+		const apiUrl = (<any>environment).api.url;
+		const apiSegments = apiUrl.match(/(.*?):(\d+)/);
 		Diaspora.createNamedDataSource('main', 'webApi', {
-			host: location.hostname,
-			port: 3210,
+			host: apiSegments[1],
+			port: apiSegments[2],
 		});
-		ContactMail = Diaspora.declareModel('ContactMail', {
+		this.ContactMail = Diaspora.declareModel('ContactMail', {
 			sources: 'main',
 			attributes: {
+				recaptcha: {
+					type: 'string',
+					required: true,
+				},
 				senderMail: {
 					type: 'string',
 					required: true,
@@ -35,13 +43,14 @@ export class MailService {
 		});
 	}
 
-	sendMail(mail) {
+	sendMail(mail, recaptcha) {
 		const remappedMail = {
 			senderMail: mail.email,
 			senderName: mail.name,
 			senderCategory: mail.type,
 			message: mail.message,
+			recaptcha: recaptcha,
 		};
-		return ContactMail.spawn(remappedMail).persist();
+		return this.ContactMail.spawn(remappedMail).persist();
 	}
 }

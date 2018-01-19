@@ -13,10 +13,11 @@ import * as $ from 'jquery';
 	styleUrls: ['./contact-form.scss']
 })
 export class ContactFormComponent implements AfterContentInit {
-	@ViewChild('fields', { read: ElementRef }) fieldsEl: ElementRef;
+	@ViewChild('form', { read: ElementRef }) formEl: ElementRef;
 	@ViewChild('infos', { read: ElementRef }) infosEl: ElementRef;
 	@Input() title: String = undefined;
 	@Input() defaultText: String;
+	private captchaResponse: string;
 
 
 	public emailForm = new FormGroup({
@@ -36,11 +37,22 @@ export class ContactFormComponent implements AfterContentInit {
 		}
 	}
 
+	resolved(captchaResponse: string) {
+		this.captchaResponse = captchaResponse;
+	}
+
 	submitContact(event) {
-		console.log(event);
+		if (!this.captchaResponse) {
+			this.translateService.get('contactForm.result.captcha').subscribe(translated => {
+				this.infosEl.nativeElement.innerHTML = translated;
+			});
+			return;
+		}
 		this.googleAnalyticsEventsService.emitEvent('testCategory', 'testAction', 'testLabel', 10);
-		this.mailService.sendMail(this.emailForm.value).then(() => {
-			this.fieldsEl.nativeElement.style.opacity = 0;
+		this.formEl.nativeElement.style.height = this.formEl.nativeElement.clientHeight + 'px';
+		this.mailService.sendMail(this.emailForm.value, this.captchaResponse).then(() => {
+			this.formEl.nativeElement.style.opacity = 0;
+			this.formEl.nativeElement.style.height = 0;
 			this.translateService.get('contactForm.result.success').subscribe(translated => {
 				this.infosEl.nativeElement.innerHTML = translated;
 			});
@@ -53,6 +65,5 @@ export class ContactFormComponent implements AfterContentInit {
 	}
 
 	ngAfterContentInit() {
-		console.log({fieldsEl: this.fieldsEl, infosEl: this.infosEl});
 	}
 }

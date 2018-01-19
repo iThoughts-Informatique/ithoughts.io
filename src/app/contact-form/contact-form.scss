@@ -1,10 +1,17 @@
 @import '../../scss/vars';
 
-form section{
-	display:flex;
-	flex-direction: row;
-	
-	> div{
-		flex: 0 0 33.333%;
+form{
+	transition: 0.5s all;
+
+	section{
+		display:flex;
+		flex-direction: row;
+
+		> div{
+			flex: 0 0 33.333%;
+		}
 	}
+}
+.feedback{
+	margin-top: 10px;
 }

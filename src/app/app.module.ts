@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { HttpClient, HttpClientModule } from '@angular/common/http';
-import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
+import { TranslateModule, TranslateLoader, TranslateService } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 export function createTranslateLoader(http: HttpClient) {
 	return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -18,12 +18,16 @@ import {GoogleAnalyticsEventsService} from './google-analytics-events.service';
 import {MailService} from './mail.service';
 
 import { OwlModule } from 'ng2-owl-carousel';
+import { RECAPTCHA_SETTINGS, RECAPTCHA_LANGUAGE, RecaptchaSettings, RecaptchaModule } from 'ng-recaptcha';
 
 import { routing } from './app.routes';
 import { AboutComponent } from './pages/about/about.component';
 import { IndexPageComponent } from './pages/index/indexPage.component';
 import { HostingComponent } from './pages/index/hosting/hosting.component';
 import { DevComponent } from './pages/index/dev/dev.component';
+
+
+import { environment } from '../environments/environment';
 
 @NgModule({
 	declarations: [
@@ -50,13 +54,24 @@ import { DevComponent } from './pages/index/dev/dev.component';
 		}),
 		routing,
 		OwlModule,
+		RecaptchaModule.forRoot(), // Keep in mind the "forRoot"-magic nuances!
 	],
 	providers: [
 		GoogleAnalyticsEventsService,
 		MailService,
+		{
+			provide: RECAPTCHA_SETTINGS,
+			useValue: { siteKey: (<any>environment).app.recaptchaKey } as RecaptchaSettings,
+		},
+		/*{
+			provide: RECAPTCHA_LANGUAGE,
+			useValue: TranslateService.currentLang,
+		},*/
 	],
 	bootstrap: [
 		AppComponent,
 	]
 })
-export class AppModule { }
+
+export class AppModule {}
+
