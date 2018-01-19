@@ -1,7 +1,10 @@
 import {Component} from '@angular/core';
 import {TranslateService} from '@ngx-translate/core';
 
-@Component({})
+@Component({
+	selector: 'app-translatable',
+	template: '',
+})
 export class AppTranslatableComponent {
 	constructor(public translate: TranslateService) {
 		this.translate.addLangs(['en', 'fr', 'xx']);

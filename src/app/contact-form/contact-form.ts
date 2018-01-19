@@ -1,5 +1,4 @@
 import { Input, Component, AfterContentInit, ElementRef, ViewChild } from '@angular/core';
-import { AppTranslatableComponent } from '../app.translatableComponent';
 
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import {TranslateService} from '@ngx-translate/core';
@@ -17,6 +16,10 @@ export class ContactFormComponent implements AfterContentInit {
 	@ViewChild('infos', { read: ElementRef }) infosEl: ElementRef;
 	@Input() title: String = undefined;
 	@Input() defaultText: String;
+	public name;
+	public email;
+	public type;
+	public message;
 	private captchaResponse: string;
 
 

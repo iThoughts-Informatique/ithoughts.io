@@ -17,9 +17,10 @@ import { ReactiveFormsModule } from '@angular/forms';
 import {GoogleAnalyticsEventsService} from './google-analytics-events.service';
 import {MailService} from './mail.service';
 
-import { OwlModule } from 'ng2-owl-carousel';
+import { OwlModule } from 'ngx-owl-carousel';
 import { RECAPTCHA_SETTINGS, RECAPTCHA_LANGUAGE, RecaptchaSettings, RecaptchaModule } from 'ng-recaptcha';
 
+import { AppTranslatableComponent } from './app.translatableComponent';
 import { routing } from './app.routes';
 import { AboutComponent } from './pages/about/about.component';
 import { IndexPageComponent } from './pages/index/indexPage.component';
@@ -31,6 +32,7 @@ import { environment } from '../environments/environment';
 
 @NgModule({
 	declarations: [
+		AppTranslatableComponent,
 		AppComponent,
 		ContactFormComponent,
 		BannerCtaComponent,
