@@ -23,6 +23,7 @@
 			"type": "Vous êtes..."
 		},
 		"result": {
+			"captcha": "Veuillez valider le captcha.",
 			"error": "Une erreur est survenue. Veuillez réessayer ultérieurement.",
 			"success": "Votre message a bien été envoyé."
 		},
@@ -36,7 +37,7 @@
 		"seeMore": "Voir plus"
 	},
 	"dev": {
-		"gendesc": "<p>Aujourd'hui la visibilité en ligne est devenue un atout capital pour la réussite d'un projet:</p><ul class=\"checklist\"><li>Plus de <a href=\"https://www.wizishop.fr/blog/chiffre-ecommerce/ropo-78-des-acheteurs-sinforment-en-ligne-avant-dacheter-en-magasin-le-chiffre-du-jour.html\" rel=\"nofollow\">75% des internautes</a> des acheteurs se renseignent en ligne au préalable.</li><li>Un site internet bien construit/présenté est un gage de sérieux pour votre entreprise. (trouver lien)</li></ul>",
+		"gendesc": "<p>Aujourd'hui la visibilité en ligne est devenue un atout capital pour la réussite d'un projet:</p><ul class=\"checklist\"><li>Plus de <a href=\"https://www.wizishop.fr/blog/chiffre-ecommerce/ropo-78-des-acheteurs-sinforment-en-ligne-avant-dacheter-en-magasin-le-chiffre-du-jour.html\" rel=\"nofollow\">75% des internautes</a> se renseignent en ligne au préalable.</li><li>Un site internet bien construit/présenté est un gage de sérieux pour votre entreprise.</li></ul>",
 		"left": {
 			"desc": "<p>Idéal pour votre projet de site corporate, de e-shop, de blog forum.</p><p>Le CMS est un équilibre entre <em>facilité</em> d'utilisation, <em>versatilité</em> et <em>rapidité</em> de mise en place.</p>",
 			"img": {

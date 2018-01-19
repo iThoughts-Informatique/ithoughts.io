@@ -2,113 +2,114 @@
 	"about": {
 		"legal": {
 			"contact": {
-				"email": "",
-				"phone": "",
-				"title": ""
+				"email": "Email",
+				"phone": "Phone",
+				"title": "Contact"
 			},
 			"identity": {
-				"title": ""
+				"title": "Identity"
 			},
-			"title": ""
+			"title": "Legal notice"
 		}
 	},
 	"bannerCta": {
-		"cta": ""
+		"cta": "Contact us"
 	},
 	"contactForm": {
 		"labels": {
-			"email": "",
-			"message": "",
-			"name": "",
-			"type": ""
+			"email": "Mail",
+			"message": "Message",
+			"name": "Name",
+			"type": "You are..."
 		},
 		"result": {
-			"error": "",
-			"success": ""
+			"captcha": "Please validate captcha.",
+			"error": "An error occured. Please retry later.",
+			"success": "Your message has been sent."
 		},
-		"submit": "",
+		"submit": "Envoyer",
 		"type": {
-			"part": "",
-			"pro": ""
+			"part": "a professional",
+			"pro": "a private individual"
 		}
 	},
 	"cta": {
-		"seeMore": ""
+		"seeMore": "See more"
 	},
 	"dev": {
-		"gendesc": "",
+		"gendesc": "<p>Today, the online visibility is a key point for the success of a project:</p><ul class=\"checklist\"><li>More than <a href=\"https://www.wizishop.fr/blog/chiffre-ecommerce/ropo-78-des-acheteurs-sinforment-en-ligne-avant-dacheter-en-magasin-le-chiffre-du-jour.html\" rel=\"nofollow\">75% of internet users</a> check online before buying.</li><li>A well designed/built website is a guarantee of seriousness for your company</li></ul>",
 		"left": {
-			"desc": "",
+			"desc": "<p>Ideal for most corporate, e-shop or blog sites.</p><p>The CMS mixes <em>ease</em> of use, <em>versatility</em> & setup <em>quickness</em></p>",
 			"img": {
 				"prestashop": {
-					"alt": ""
+					"alt": "Prestashop logo"
 				},
 				"typo3": {
-					"alt": ""
+					"alt": "Typo3 logo"
 				},
 				"wordpress": {
-					"alt": ""
+					"alt": "WordPress logo"
 				}
 			},
-			"subtitle": "",
-			"title": ""
+			"subtitle": "Economical & widely used",
+			"title": "The CMS"
 		},
 		"right": {
-			"desc": "",
+			"desc": "<p>For your needs requiring special specifications, a platform matching your very own needs will be designed & developed.</p>",
 			"img": {
 				"angular": {
-					"alt": ""
+					"alt": "Angular2 logo"
 				},
 				"sailsjs": {
-					"alt": ""
+					"alt": "SailsJS logo"
 				},
 				"symfony": {
-					"alt": ""
+					"alt": "Symfony3 logo"
 				}
 			},
-			"subtitle": "",
-			"title": ""
+			"subtitle": "Flexible & on demand",
+			"title": "Specific development"
 		},
-		"title": ""
+		"title": "Being visible: a challenge for companies"
 	},
 	"footer": {
-		"rights": ""
+		"rights": "All rights reserved"
 	},
 	"hosting": {
 		"feat": {
 			"docker": {
-				"alt": "",
-				"title": ""
+				"alt": "Docker logo",
+				"title": "Contenerized architecture with Docker"
 			},
 			"ovh": {
-				"alt": "",
-				"title": ""
+				"alt": "OVH logo",
+				"title": "Hosting with OVH"
 			},
 			"rainloop": {
-				"alt": "",
-				"title": ""
+				"alt": "Rainloop logo",
+				"title": "Webmail with Rainloop"
 			}
 		},
-		"features": "",
-		"gendesc": "",
-		"title": ""
+		"features": "<ul class=\"checklist\"><li>A cloud architecture for your services</li><li>Your datas are secured</li><li>Your project is easily movable</li><li>Reduced maintenance costs</li><li>HTTPS setup included</li><li>5 mail addresses & webmail included</li></ul>",
+		"gendesc": "Your website, platform or app hosting is an important choice. A safe hosting protects your datas, your app & your users.",
+		"title": "A modern hosting you won't need to worry about"
 	},
 	"index": {
 		"bannerCta": {
 			"catchPhrase": "",
-			"title": ""
+			"title": "Let's prepare your website"
 		},
 		"head": {
-			"subtitle": "",
-			"title": ""
+			"subtitle": "Website creation & hosting",
+			"title": "iThoughts"
 		}
 	},
 	"menu": {
 		"about": {
-			"_": ""
+			"_": "About"
 		},
 		"index": {
-			"_": ""
+			"_": "Home"
 		}
 	}
 }
