@@ -29,8 +29,8 @@
 		},
 		"submit": "Envoyer",
 		"type": {
-			"part": "a professional",
-			"pro": "a private individual"
+			"pro": "a professional",
+			"part": "a private individual"
 		}
 	},
 	"cta": {

@@ -10,10 +10,11 @@ export class MailService {
 
 	constructor() {
 		const apiUrl = (<any>environment).api.url;
-		const apiSegments = apiUrl.match(/(.*?):(\d+)/);
+		const apiSegments = apiUrl.match(/^(?:(https?):\/\/)?(.+?)(?::(\d+))?$/);
 		Diaspora.createNamedDataSource('main', 'webApi', {
-			host: apiSegments[1],
-			port: apiSegments[2],
+			scheme: apiSegments[1],
+			host:   apiSegments[2],
+			port:   apiSegments[3],
 		});
 		this.ContactMail = Diaspora.declareModel('ContactMail', {
 			sources: 'main',

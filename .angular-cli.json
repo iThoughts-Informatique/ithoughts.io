@@ -11,6 +11,7 @@
 				"assets",
 				"favicon.ico"
 			],
+			"sourceMap": true,
 			"index": "index.html",
 			"main": "main.ts",
 			"polyfills": "polyfills.ts",
